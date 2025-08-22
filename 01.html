@@ -12,11 +12,20 @@
     */
 
     //ENTRADA
+    let filaDeAtnedimento = ["Ana", "Bruno", "Carla"];
+    const nova = prompt(`Quem entrou na fila?`);
+    const velha = prompt(' Quem saiu da fila? (Ana, Bruna ou Carla?)')
+
 
 
     //PROCESSAMENTO
+    let remover = filaDeAtnedimento.indexOf(velha);
+    filaDeAtnedimento.splice(remover, 1);
+    filaDeAtnedimento.push(nova);
+
 
 
     //SAÍDA
+    document.write(`A fila agora é: ${filaDeAtnedimento.join(", ")}`);
 
 </script>
