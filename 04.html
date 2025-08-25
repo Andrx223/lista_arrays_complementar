@@ -15,6 +15,7 @@
     */
 
     //ENTRADA
+    alert(`"Farinha", "Açúcar", "Ovos", "Sal", "Chocolate"`);
     let ingredientes = ["Farinha", "Açúcar", "Ovos", "Sal", "Chocolate"];
     const segredoGigatonico = prompt('Existe um igrediente secreto nesta lista? (Use S para sim e N para não)').toUpperCase().trim();
 
@@ -23,7 +24,8 @@
    
     if(segredoGigatonico == "S"){
         let qual = prompt('Qual o igrediente?')
-       document.write(`O ingrediente está na posição ${ingredientes.indexOf(qual)}`) 
+        if(qual != "Farinha" || "Açúcar" || "Ovos" || "Sal" || "Chocolate")
+       document.write(`O ingrediente está na posição ${ingredientes.indexOf(qual) + 1}`) 
     }else{
         document.write('Tudo bem!')
     }

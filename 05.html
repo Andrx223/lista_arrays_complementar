@@ -17,11 +17,17 @@
     */
 
     //ENTRADA
+    const codigosDeAcesso = ["Delta-7", "Alpha-9", "Omega-3", "Gama-4", "Zeta-1"];
+    const codigoNovo = prompt(`Insira um novo código para substituir o "Omega-3`);
 
 
     //PROCESSAMENTO
+    let copia = ["Delta-7", "Alpha-9", "Omega-3", "Gama-4", "Zeta-1"];
+    codigoCopia = ["Alpha-9", "Omega-3", "Gama-4"];
+    let codigoAtualizado =  ["Delta-7", "Alpha-9", codigoNovo, "Gama-4", "Zeta-1"];
 
 
     //SAÍDA
+    document.write(`Cóidgo Original: ${codigosDeAcesso.join(", ")} || Código público: ${codigoCopia.join(", ")} || Código Alterado: ${codigoAtualizado.join(", ")}`);
     
 </script>
