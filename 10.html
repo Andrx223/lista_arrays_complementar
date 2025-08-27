@@ -24,11 +24,26 @@
     */
 
     //ENTRADA
+    let inventarioMagico = ["Poção de Cura", "Elixir da Coragem", "Antídoto Universal", "Gás do Sono"];
+    alert('Qual item do inventário você deseja comprar?');
+    alert(`"Poção de Cura", "Elixir da Coragem", "Antídoto Universal", "Gás do Sono"`);
+    const item = prompt(`Insira aqui o item desejado`);
 
 
     //PROCESSAMENTO
+    if (inventarioMagico.indexOf(item) >= 0) {
+        inventarioMagico.splice(inventarioMagico.indexOf(item), 1);
+         document.write(`Inventário Atual: ${inventarioMagico.join(", ")}`);
+        
+    }else{
+        document.write(`O item ${item} não está no nosso estoque`) 
+    }
+   
+
 
 
     //SAÍDA
+    // if(item == "Poção de Cura" || item == "Elixir da Coragem" || item == "Antídoto Universal" || item == "Gás do Sono"){
+    // Deixei em sua homenagem pro Fábio <3
     
 </script>

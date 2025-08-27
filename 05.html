@@ -22,12 +22,12 @@
 
 
     //PROCESSAMENTO
-    let copia = ["Delta-7", "Alpha-9", "Omega-3", "Gama-4", "Zeta-1"];
-    codigoCopia = ["Alpha-9", "Omega-3", "Gama-4"];
-    let codigoAtualizado =  ["Delta-7", "Alpha-9", codigoNovo, "Gama-4", "Zeta-1"];
+    let copia = codigosDeAcesso.slice(1, 4);
+    let codigoAtualizado =  ["Delta-7", "Alpha-9", "Omega-3", "Gama-4", "Zeta-1"];
+    codigoAtualizado.splice(codigoAtualizado.indexOf("Omega-3"), 1, codigoNovo);
 
 
     //SAÍDA
-    document.write(`Cóidgo Original: ${codigosDeAcesso.join(", ")} || Código público: ${codigoCopia.join(", ")} || Código Alterado: ${codigoAtualizado.join(", ")}`);
+    document.write(`Cóidgo Original: ${codigosDeAcesso.join(", ")} || Código público: ${copia.join(", ")} || Código Alterado: ${codigoAtualizado.join(", ")}`);
     
 </script>

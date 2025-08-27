@@ -14,9 +14,21 @@
     */
 
     //ENTRADA
+     const convidadosVIP = ["Angela", "Ricardo", "Julia", "Marcos", "Fernanda"];
+     const nome =  prompt(`Qual nome você deseja verificar?`);
+
+
 
 
     //PROCESSAMENTO
+    const numero = convidadosVIP.indexOf(nome);
+    if(numero > -1){
+        document.write('Acesso Liberado')
+    }else{
+        document.write('Acesso Negado')
+    }
+    
+
 
 
     //SAÍDA
