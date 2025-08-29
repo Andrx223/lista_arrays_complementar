@@ -16,16 +16,27 @@
 
     //ENTRADA
      const etapasLoteA = ["Corte", "Montagem", "Pintura", "Verificação de Qualidade", "Embalagem"];
-     const etapasConcluidas = prompt[`Quais as etapas do seu lote?`];
+     const etapasConcluidas = Number(prompt(`Qual a quantidade de etapas no processo?`));
 
 
     //PROCESSAMENTO
-    let qualidade = []
+    const temNumeroCorretoDeEtapas = etapasConcluidas === etapasLoteA.length;
+    let temQualidade 
+    if(etapasLoteA.indexOf("Verificação de Qualidade") > -1){
+        temQualidade = true
+    }else{
+        temQualidade = false
+    }
     
-    if(etapasConcluidas.length() == 5){
-        if(qualidade == true){
-            document.write(`Lote aprovado`)
+    if(temNumeroCorretoDeEtapas == true){
+        if(temQualidade == true){
+            document.write(`Lote aprovado!`)
+           
+        }else{
+            document.write('Lote Negado!')
         }
+    }else{
+        document.write('Lote Negado!')
     }
 
 

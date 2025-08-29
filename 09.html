@@ -15,11 +15,24 @@
     */
     
     //ENTRADA
+    let timeTitular = ["Phoenix", "Jett", "Sova", "Sage", "Cypher"];
+    const jogadorSai = prompt('Qual jogador vai sair?');
+    const jogadorEntra = prompt('Qual jogador ira entrar no lugar?');
 
 
     //PROCESSAMENTO
+    let posiçao = timeTitular.indexOf(jogadorSai)
+    if(posiçao > -1){
+        timeTitular.splice(posiçao, 1, jogadorEntra);
+            document.write(timeTitular.join(", "));
+    }else{
+        document.write('Valor inválido')
+    }
+    
+
 
 
     //SAÍDA
+
     
 </script>
