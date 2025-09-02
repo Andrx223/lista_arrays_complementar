@@ -16,12 +16,19 @@
     */
 
     //ENTRADA
+    alert('Sua equipe dos sonhos está sendo formada!');
+    const equipeAlpha = ["Agente Smith", "Agente Jones", "Técnico Brown", "Analista White"];
+    const equipeBravo = ["Especialista Green", "Piloto Black", "Médica Grey", "Engenheiro Blue"];
 
 
 
     //PROCESSAMENTO
+    const equipe1 = equipeAlpha.slice(0, 2);
+    const equipe2 = equipeBravo.slice(-2);
+    const equipeDeElite = equipe1.concat(equipe2);
 
 
     //SAÍDA
+    document.write(`Sua equipe de elite: ${equipeDeElite.join(", ")}`);
     
 </script>
